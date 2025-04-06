@@ -36,7 +36,7 @@ header .logo p {
 
 header .logo .bandeira {
 	width: 100%;
-	max-width: 300px;
+	max-width: 200px;
 	height: auto;
 	margin-bottom: 10px;
 }
@@ -69,7 +69,16 @@ header .logo .bandeira {
 .slider-item {
 	min-width: 100%;
 	transition: 0.5s;
-	padding: 20px;
+}
+
+.item-content {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 40px;
 	background-color: #fff;
 	border-radius: 15px;
 }
@@ -80,8 +89,50 @@ header .logo .bandeira {
 }
 
 .slider-item p {
-	font-size: 1rem;
+	font-size: 1.2rem;
 	color: #7f8c8d;
+	text-align: justify;
+}
+
+.box-content-img-left {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+}
+
+.box-content-img-left img {
+	width: 100px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px black;
+}
+
+.box-content-img-left p {
+	font-size: 1.2rem;
+	color: #7f8c8d;
+	text-align: justify;
+}
+
+.citacao {
+	text-align: center !important;
+}
+
+.img-with-legend {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+}
+
+.img-with-legend img {
+	width: 100%;
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px black;
+}
+
+.img-with-legend p {
+	font-size: 0.8rem;
+	color: #7f8c8d;
+	text-align: center;
 }
 
 /* Controles do Slider */
@@ -104,51 +155,26 @@ header .logo .bandeira {
 	background-color: var(--secondary-color);
 }
 
-/* Pontos Turísticos */
-.tourism {
-	padding: 50px 20px;
-	background-color: #fff;
-	text-align: center;
-}
-
-.tourism h2 {
-	font-size: 2rem;
-	margin-bottom: 40px;
-}
-
-.tourist-spots {
+.box-content-img-right {
 	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-}
-
-.spot {
-	background-color: #3498db;
-	color: white;
-	padding: 20px;
-	width: 30%;
-	margin-bottom: 20px;
-	border-radius: 8px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.spot h3 {
-	font-size: 1.5rem;
-	margin-bottom: 10px;
-}
-
-.spot p {
-	font-size: 1rem;
-	color: #ecf0f1;
+	flex-direction: row;
+	gap: 20px;
 }
 
 /* Rodapé */
 footer {
-	background-color: #2c3e50;
+	background-color: var(--primary-color);
 	color: white;
 	text-align: center;
 	padding: 20px;
 	position: sticky;
 	bottom: 0;
 	width: 100%;
+}
+
+@media (max-width: 730px) {
+	.box-content-img-left {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
 }
